@@ -26,6 +26,7 @@ function clear() {
       sceneDiv.removeChild(sceneDiv.firstChild);
   }
   boxes.splice(0, boxes.length);
+  counter = 1;
 }
 
 function clearForm() {
