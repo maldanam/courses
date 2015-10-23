@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title> The While Loop </title>
+  <meta charset="utf-8">
+  <script>
+    // Exercise 1
+    // var mms = 5;
+    // while (mms > 0) {
+    //    console.log("Eat an M&M");
+    //    mms--;
+    // }
+    // console.log("All out of M&Ms");
+
+    // Exercise 2
+    // for (var mms = 5; mms > 0; mms--) {
+    //   console.log("Eat an M&M");
+    // }
+    // console.log("All out of M&Ms");
+
+    // Exercise 3
+    // for (var mms = 5; mms > 0; mms--) {
+    //   if (mms >= 3) {
+    //     console.log("Still lots of M&Ms left, so eat more!");
+    //   } else {
+    //     console.log("Getting low on M&Ms, take it easy!");
+    //   }
+    // }
+    // console.log("All out of M&Ms");
+
+    // Exercise 4
+    window.onload = init;
+    function init() {
+      var output = "";
+      for (var mms = 5; mms > 0; mms--) {
+        if (mms >= 3) {
+            output += "Still lots of M&amp;Ms left, so eat more!<br>";
+        } else {
+            output += "Getting low on M&amp;Ms, take it easy!<br>";
+        }
+      }
+      output += "All out of M&amp;Ms";
+      var p = document.getElementById("output");
+      p.innerHTML = output;
+    }
+    
+  </script>
+</head>
+<body>
+  <p id="output">
+  </p>
+</body>
+</html>

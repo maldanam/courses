@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title> Object Methods </title>
+  <meta charset="utf-8">
+  <script>
+    window.onload = init;
+
+    function Pet(type, name, weight, likes, sound) {
+      this.type = type;
+      this.name = name;
+      this.weight = weight;
+      this.likes = likes;
+      this.sound = sound;
+
+      // this.meow = function() {
+      //     return "Meow!";
+      // };
+      // this.bark = function() {
+      //   return "Woof!";
+      // };
+      // this.bark = function(howMany) {
+      //     var says = "";
+      //     for (var i = 0; i < howMany; i++) {
+      //         says += "Woof! ";
+      //     }
+      //     return says;
+      //  };
+      this.speak = function(howMany) {
+          var says = "";
+          for (var i = 0; i < howMany; i++) {
+            // says += this.sound + " ";
+            says += sound + " ";
+          }
+          return says;
+      };
+    }
+
+    function init() {
+      var annie = new Pet("cat", "Annie", 6, ["sleeping", "teasing pickles"], "Meow");
+      var willie = new Pet("dog", "Willie", 45, ["slobbering", "panting", "eating"], "Woof!");
+
+      var div = document.getElementById("pets");
+      div.innerHTML = annie.name + " is a " + annie.type + " and " + willie.name +
+                      " is a " + willie.type;
+      div.innerHTML = willie.name + " says " + willie.speak(3);
+      //div.innerHTML += "<br>" + annie.name + " says " + annie.meow();
+
+      annie.sound = "Purrrr";
+      div.innerHTML += "<br>" + annie.name + " says " + annie.speak(2);
+    }
+
+</script>
+</head>
+<body>
+  <div id="pets">
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title> Functions </title>
+  <meta charset="utf-8">
+  <script>
+    // Exercise 1
+    // function countWords() {
+    //   var sentence = "The answer to life, the universe, and everything is 42";
+    //   var words = sentence.split(" ");
+    //   var numWords = words.length;
+    //   return numWords;
+    // }
+    //
+    // var howManyWords = countWords();
+    // alert(howManyWords + " words in the sentence.");
+
+    // Exercise 2
+    // function countWords(sentence) {
+    //   var words = sentence.split(" ");
+    //   var numWords = words.length;
+    //   return numWords;
+    // }
+    //
+    // var howManyWords = countWords("The answer to life, the universe, and everything is 42");
+    // alert(howManyWords + " words in the sentence.");
+    //
+    // var howManyWords = countWords("A short sentence");
+    // alert(howManyWords + " words in the sentence.");
+
+    // Exercise 3
+    // function countWords(sentence) {
+    //   var words = sentence.split(" ");
+    //   var numWords = words.length;
+    //   return numWords;
+    // }
+    //
+    // var testSentence = prompt("Enter a sentence, and I'll find how many words it has:");
+    // var howManyWords = countWords(testSentence);
+    // alert(howManyWords + " words in the sentence.");
+
+    // Exercise 4
+    // function getSentence() {
+    //     var sentence = prompt("Please enter a sentence");
+    //     if (sentence == null || sentence == "") {
+    //         alert("Please enter some words!");
+    //     }
+    //     else {
+    //         var howManyWords = countWords(sentence);
+    //         alert(howManyWords + " words in the sentence.");
+    //     }
+    // }
+    //
+    // function countWords(sentence) {
+    //     var words = sentence.split(" ");
+    //     var numWords = words.length;
+    //     return numWords;
+    // }
+    //
+    // getSentence();
+
+    // Exercise 5
+    window.onload = init;
+
+    function init() {
+      var button = document.getElementById("submit");
+      button.onclick = getSentence;
+    }
+
+    function getSentence() {
+      var sentenceInput = document.getElementById("sentence");
+      var sentence = sentenceInput.value;
+      if (sentence == null || sentence == "") {
+        alert("Please enter some words!");
+      }
+      else {
+        var howManyWords = countWords(sentence);
+        alert(howManyWords + " words in the sentence.");
+      }
+    }
+
+    function countWords(sentence) {
+      var words = sentence.split(" ");
+      var numWords = words.length;
+      return numWords;
+    }
+
+  </script>
+</head>
+<body>
+
+  <!-- Exercise 5 -->
+  <form>
+    <label for="sentence">Enter a sentence: </label>
+    <input type="text" id="sentence" size="20" value=""> <br>
+    <input type="button" id="submit" value="Get the number of words!">
+  </form>
+
+</body>
+</html>

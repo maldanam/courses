@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title> Objects </title>
+  <meta charset="utf-8">
+  <script>
+    window.onload = init;
+
+    function init() {
+        var tilla = {
+          type: "dog",
+          name: "Tilla",
+          weight: 26,
+          likes: ["playing ball", "going for walks", "eating anything"]
+        };
+
+        var pickles = {
+          type: "cat",
+          name: "Pickles",
+          weight: 7,
+          likes: ["sleeping", "eating butter"]
+        };
+        var div = document.getElementById("pets");
+        // div.innerHTML =
+        //    "My " + tilla.type + " is named " + tilla.name +
+        //    " and she weighs " + tilla.weight + " pounds.";
+        // var pets = [tilla, pickles];
+        // for (var i = 0; i < pets.length; i++) {
+        //   var pet = pets[i];
+        //   if (pet.type == "dog") {
+        //     div.innerHTML += pet.name + " says Woof! <br>";
+        //   }
+        //   else if (pet.type == "cat") {
+        //     div.innerHTML += pet.name + " says Meow! <br>";
+        //   }
+        // }
+        div.innerHTML = tilla.name + " enjoys ";
+        for (var i = 0; i < tilla.likes.length; i++) {
+          div.innerHTML += tilla.likes[i];
+          if (i < tilla.likes.length - 1) {
+            div.innerHTML += " and ";
+          }
+        }
+        div.innerHTML += "<br>" + pickles.name + " enjoys ";
+        for (var i = 0; i < pickles.likes.length; i++) {
+          div.innerHTML += pickles.likes[i];
+          if (i < pickles.likes.length - 1) {
+            div.innerHTML += " and ";
+          }
+        }
+    }
+  </script>
+</head>
+<body>
+  <div id="pets">
+  </div>
+</body>
+</html>

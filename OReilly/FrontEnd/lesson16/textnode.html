@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title> Playing with Text Nodes </title>
+  <meta charset="utf-8">
+  <script>
+    window.onload = init;
+
+    function init() {
+      // Exercise 1
+      //  var div = document.getElementById("article");
+      //  for (var i = 0; i < div.childNodes.length; i++) {
+      //     console.log(div.childNodes[i]);
+      //     div.childNodes[i].style.backgroundColor = "#acacac";
+      //  }
+
+      // Exercise 2
+      //  var p = document.getElementById("p1");
+      //  for (var i = 0; i < p.childNodes.length; i++) {
+      //    console.log(p.childNodes[i]);
+      //  }
+
+       // Exercise 3
+       var paras = document.querySelectorAll("div#article p");
+       for (var i = 0; i < paras.length; i++) {
+         paras[i].style.backgroundColor = "#acacac";
+       }
+    }
+  </script>
+</head>
+<body>
+  <div id="article">
+    <p id="p1">
+      This is the first paragraph in my brilliant article.
+    </p>
+    <p id="p2">
+      This is the second paragraph. Is my article getting too long?
+    </p>
+  </div>
+</body>
+</html>

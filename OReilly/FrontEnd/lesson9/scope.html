@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title> Scope </title>
+  <meta charset="utf-8">
+  <script>
+    var circleRadius = 3;
+    console.log("Radius: " + circleRadius);
+
+    //var area = circleArea();
+    var area = circleArea(circleRadius);
+    console.log("Radius after we call circleArea(): " + circleRadius);
+
+    function circleArea(circleRadius) {
+      //var circleRadius = 5;
+      circleRadius = 5;
+      console.log("Radius in the function circleArea(): " + circleRadius);
+      var area = Math.PI * Math.pow(circleRadius,2);
+      return area;
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
